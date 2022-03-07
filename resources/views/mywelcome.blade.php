@@ -23,10 +23,24 @@
     <body class="antialiased">
         <div class="relative  items-top justify-center ">
             <p>laravel</p>
-            <hr>
-        <p> {{$obj1 -> name}} bla bla bla {{$obj1 -> age}}</p>
+        </div>
+        <!-- this is comment with HTML+Laravel -->
+       {{-- <p> {{$obj1 -> name}} bla bla bla {{$obj1 -> age}}</p> --}}
         <br>
         <h2>{{ __('messages.welcome') }}</h2>
-        </div>
+
+      
+      
+        
+     
+      @foreach($data as $_data)
+      <p> {{$_data}}</p>
+      @endforeach
+     
+       @forelse($data as $_data)
+       <p> {{$_data}}</p>
+       @empty <p> no thing in it </p>
+       @endforelse
+       
     </body>
 </html>
